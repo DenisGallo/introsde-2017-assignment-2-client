@@ -1,0 +1,668 @@
+     [java] URL of the server being used: https://server-as2.herokuapp.com/as2
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#1 (GET BASE_URL/person). Calculate how many people are in the response. If more than 4, result is OK, else is ERROR (less than 5 persons). Save into a variable id of the first person (first_person_id) and of the last person (last_person_id)
+     [java] 
+     [java] Request #1: GET /person Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <person id="1">
+     [java]     <firstname>Mattia</firstname>
+     [java]     <lastname>Buffa</lastname>
+     [java]     <birthdate>24-02-1992</birthdate>
+     [java]     <activities>
+     [java]         <activity id="1">
+     [java]             <name>Play PUBG</name>
+     [java]             <description>Play PUBG Squadd FPP</description>
+     [java]             <startdate>15-11-2017 21:30:00.0</startdate>
+     [java]             <place>Home</place>
+     [java]             <activity_type>
+     [java]                 <name>Game</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] <person id="2">
+     [java]     <firstname>Linda Marilena</firstname>
+     [java]     <lastname>Bertolli</lastname>
+     [java]     <birthdate>28-01-1994</birthdate>
+     [java]     <activities>
+     [java]         <activity id="2">
+     [java]             <name>Thesis</name>
+     [java]             <description>Explain thesis</description>
+     [java]             <startdate>20-11-2017 09:00:00.0</startdate>
+     [java]             <place>Unitn</place>
+     [java]             <activity_type>
+     [java]                 <name>School</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] <person id="3">
+     [java]     <firstname>Denis</firstname>
+     [java]     <lastname>Gallo</lastname>
+     [java]     <birthdate>08-04-1993</birthdate>
+     [java]     <activities>
+     [java]         <activity id="3">
+     [java]             <name>Watch Stream</name>
+     [java]             <description>Watch Buffin4576' stream</description>
+     [java]             <startdate>15-11-2017 21:30:00.0</startdate>
+     [java]             <place>Home</place>
+     [java]             <activity_type>
+     [java]                 <name>Media</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] <person id="4">
+     [java]     <firstname>Davide</firstname>
+     [java]     <lastname>Buffa</lastname>
+     [java]     <birthdate>24-02-1992</birthdate>
+     [java]     <activities>
+     [java]         <activity id="4">
+     [java]             <name>Facebook</name>
+     [java]             <description>Post things on Facebook</description>
+     [java]             <startdate>18-11-2017 21:30:00.0</startdate>
+     [java]             <place>Home</place>
+     [java]             <activity_type>
+     [java]                 <name>Social</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] <person id="5">
+     [java]     <firstname>Luca</firstname>
+     [java]     <lastname>Buffa</lastname>
+     [java]     <birthdate>24-02-1992</birthdate>
+     [java]     <activities>
+     [java]         <activity id="5">
+     [java]             <name>Ruuning</name>
+     [java]             <description>400m run</description>
+     [java]             <startdate>22-11-2017 11:00:00.0</startdate>
+     [java]             <place>Stadium</place>
+     [java]             <activity_type>
+     [java]                 <name>Sport</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #1: GET /person Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Person" : {
+     [java]     "id" : 1,
+     [java]     "firstname" : "Mattia",
+     [java]     "lastname" : "Buffa",
+     [java]     "birthdate" : "24-02-1992",
+     [java]     "activities" : [ {
+     [java]       "id" : 1,
+     [java]       "name" : "Play PUBG",
+     [java]       "description" : "Play PUBG Squadd FPP",
+     [java]       "startdate" : "15-11-2017 21:30:00.0",
+     [java]       "place" : "Home",
+     [java]       "type" : {
+     [java]         "name" : "Game"
+     [java]       }
+     [java]     } ]
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "Person" : {
+     [java]     "id" : 2,
+     [java]     "firstname" : "Linda Marilena",
+     [java]     "lastname" : "Bertolli",
+     [java]     "birthdate" : "28-01-1994",
+     [java]     "activities" : [ {
+     [java]       "id" : 2,
+     [java]       "name" : "Thesis",
+     [java]       "description" : "Explain thesis",
+     [java]       "startdate" : "20-11-2017 09:00:00.0",
+     [java]       "place" : "Unitn",
+     [java]       "type" : {
+     [java]         "name" : "School"
+     [java]       }
+     [java]     } ]
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "Person" : {
+     [java]     "id" : 3,
+     [java]     "firstname" : "Denis",
+     [java]     "lastname" : "Gallo",
+     [java]     "birthdate" : "08-04-1993",
+     [java]     "activities" : [ {
+     [java]       "id" : 3,
+     [java]       "name" : "Watch Stream",
+     [java]       "description" : "Watch Buffin4576' stream",
+     [java]       "startdate" : "15-11-2017 21:30:00.0",
+     [java]       "place" : "Home",
+     [java]       "type" : {
+     [java]         "name" : "Media"
+     [java]       }
+     [java]     } ]
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "Person" : {
+     [java]     "id" : 4,
+     [java]     "firstname" : "Davide",
+     [java]     "lastname" : "Buffa",
+     [java]     "birthdate" : "24-02-1992",
+     [java]     "activities" : [ {
+     [java]       "id" : 4,
+     [java]       "name" : "Facebook",
+     [java]       "description" : "Post things on Facebook",
+     [java]       "startdate" : "18-11-2017 21:30:00.0",
+     [java]       "place" : "Home",
+     [java]       "type" : {
+     [java]         "name" : "Social"
+     [java]       }
+     [java]     } ]
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "Person" : {
+     [java]     "id" : 5,
+     [java]     "firstname" : "Luca",
+     [java]     "lastname" : "Buffa",
+     [java]     "birthdate" : "24-02-1992",
+     [java]     "activities" : [ {
+     [java]       "id" : 5,
+     [java]       "name" : "Ruuning",
+     [java]       "description" : "400m run",
+     [java]       "startdate" : "22-11-2017 11:00:00.0",
+     [java]       "place" : "Stadium",
+     [java]       "type" : {
+     [java]         "name" : "Sport"
+     [java]       }
+     [java]     } ]
+     [java]   }
+     [java] }
+     [java] 
+     [java] 
+     [java] Saved 2 variables. Id of first person is 1 and id of the last person is 5
+     [java] 
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#2 for first_person_id. If the responses for this is 200 or 202, the result is OK.
+     [java] 
+     [java] Request #2: GET /person/1 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <person id="1">
+     [java]     <firstname>Mattia</firstname>
+     [java]     <lastname>Buffa</lastname>
+     [java]     <birthdate>24-02-1992</birthdate>
+     [java]     <activities>
+     [java]         <activity id="1">
+     [java]             <name>Play PUBG</name>
+     [java]             <description>Play PUBG Squadd FPP</description>
+     [java]             <startdate>15-11-2017 21:30:00.0</startdate>
+     [java]             <place>Home</place>
+     [java]             <activity_type>
+     [java]                 <name>Game</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #2: GET /person/1 Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Person" : {
+     [java]     "id" : 1,
+     [java]     "firstname" : "Mattia",
+     [java]     "lastname" : "Buffa",
+     [java]     "birthdate" : "24-02-1992",
+     [java]     "activities" : [ {
+     [java]       "id" : 1,
+     [java]       "name" : "Play PUBG",
+     [java]       "description" : "Play PUBG Squadd FPP",
+     [java]       "startdate" : "15-11-2017 21:30:00.0",
+     [java]       "place" : "Home",
+     [java]       "type" : {
+     [java]         "name" : "Game"
+     [java]       }
+     [java]     } ]
+     [java]   }
+     [java] }
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#3 for first_person_id changing the firstname. If the responses has the name changed, the result is OK.
+     [java] 
+     [java] Request #3: PUT person/1 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <person>
+     [java] <firstname>Matteo</firstname>
+     [java] </person>
+     [java] 
+     [java] 
+     [java] Request #3: PUT person/1 Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]  "firstname": "Marco"
+     [java] }
+     [java] 
+     [java] You can check if the name has changed on as2/person/1
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#4 to create a new person (with one activity preference) using an XML. Store the id of the new person. If the answer is 201 (200 or 202 are also applicable) with a person in the body who has an ID, the result is OK.
+     [java] 201
+     [java] 
+     [java] Request #4: POST /person Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 201
+     [java] <person id="6">
+     [java]     <firstname>Marco</firstname>
+     [java]     <lastname>Canale</lastname>
+     [java]     <birthdate>1994-09-02</birthdate>
+     [java]     <activities>
+     [java]         <activity id="6">
+     [java]             <name>Playing LOL</name>
+     [java]             <description>Playing League of Legends</description>
+     [java]             <startdate>22-11-2017 12:00:00.0</startdate>
+     [java]             <place>At his home</place>
+     [java]             <activity_type>
+     [java]                 <name>Game</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]         <activity id="6">
+     [java]             <name>Playing LOL</name>
+     [java]             <description>Playing League of Legends</description>
+     [java]             <startdate>22-11-2017 12:00:00.0</startdate>
+     [java]             <place>At his home</place>
+     [java]             <activity_type>
+     [java]                 <name>Game</name>
+     [java]             </activity_type>
+     [java]         </activity>
+     [java]     </activities>
+     [java] </person>
+     [java] 
+     [java] 
+     [java] You can check the created person at sdelab/person/6
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#5 for the person you have just created. Then send Request#1 with the id of that person. If the answer is 404, your result must be OK.
+     [java] 
+     [java] Request #5: DELETE /person/6 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #1: GET /person/6 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 404
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #1: GET /person/6 Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 404
+     [java] 
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Follow now with the Request#6 (GET BASE_URL/activity_types ). If response contains more than 2 activity_types - result is OK, else is ERROR (less than 3 activity_types ). Save all activity Types into array (activity_types)
+     [java] 
+     [java] Request #6: GET /activity_types Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity_type>
+     [java]     <name>Game</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>School</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Media</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Social</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Sport</name>
+     [java] </activity_type>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #6: GET /activity_types Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "ActivityType" : {
+     [java]     "name" : "Game"
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "ActivityType" : {
+     [java]     "name" : "School"
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "ActivityType" : {
+     [java]     "name" : "Media"
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "ActivityType" : {
+     [java]     "name" : "Social"
+     [java]   }
+     [java] }
+     [java] {
+     [java]   "ActivityType" : {
+     [java]     "name" : "Sport"
+     [java]   }
+     [java] }
+     [java] 
+     [java] 
+     [java] ActivityType list created with the following activitytypes: Game, School, Media, Social, Sport
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#7 (GET BASE_URL/person/{id}/{activity_type}) for the first person you obtained at the beginning (first_person_id) and the last person (last_person_id), and for each activity type from activity_types. If no response has at least one activity the result is ERROR (no data at all) else result is OK. Store one activity_id and one activity_type. 
+     [java] 
+     [java] Request #7: GET /person/5/Sport Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity id="5">
+     [java]     <name>Ruuning</name>
+     [java]     <description>400m run</description>
+     [java]     <startdate>22-11-2017 11:00:00.0</startdate>
+     [java]     <place>Stadium</place>
+     [java]     <activity_type>
+     [java]         <name>Sport</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #7: GET /person/5/Sport Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Activity" : {
+     [java]     "id" : 5,
+     [java]     "name" : "Ruuning",
+     [java]     "description" : "400m run",
+     [java]     "startdate" : "22-11-2017 11:00:00.0",
+     [java]     "place" : "Stadium",
+     [java]     "type" : {
+     [java]       "name" : "Sport"
+     [java]     }
+     [java]   }
+     [java] }
+     [java] 
+     [java] Successfully stored activity id 5 and activity type Sport
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#8 (GET BASE_URL/person/{id}/{activity_type}/{activity_id}) for the stored activity_id and activity_type. If the response is 200, result is OK, else is ERROR.
+     [java] 
+     [java] Request #8: GET /person/5/Sport/5 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity id="5">
+     [java]     <name>Ruuning</name>
+     [java]     <description>400m run</description>
+     [java]     <startdate>22-11-2017 11:00:00.0</startdate>
+     [java]     <place>Stadium</place>
+     [java]     <activity_type>
+     [java]         <name>Sport</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #8: GET /person/5/Sport/5 Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Activity" : {
+     [java]     "id" : 5,
+     [java]     "name" : "Ruuning",
+     [java]     "description" : "400m run",
+     [java]     "startdate" : "22-11-2017 11:00:00.0",
+     [java]     "place" : "Stadium",
+     [java]     "type" : {
+     [java]       "name" : "Sport"
+     [java]     }
+     [java]   }
+     [java] }
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Choose a activity_type from activity_types and send the request Request#7 (GET BASE_URL/person/{first_person_id}/{activity_type}) and save count value (e.g. 5 measurements). Then send Request#9 (POST BASE_URL/person/{first_person_id}/{activity_type}) with the activity specified below. Follow up with another Request#7 as the first to check the new count value. If it is 1 measure more - print OK, else print ERROR. Remember, first with JSON and then with XML as content-types
+     [java] 
+     [java] Request #7: GET /person/1/Media Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #9: POST /person/1/Media Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: Created
+     [java] => HTTP Status: 201
+     [java] {
+     [java]   "Activity" : {
+     [java]     "id" : null,
+     [java]     "name" : "Swimming",
+     [java]     "description" : "Swimming in the river",
+     [java]     "startdate" : "2017-12-28-08:50",
+     [java]     "place" : "Adige river",
+     [java]     "type" : {
+     [java]       "name" : "Media"
+     [java]     }
+     [java]   }
+     [java] }
+     [java] 
+     [java] 
+     [java] Request #7: GET /person/1/Media Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Activity" : {
+     [java]     "id" : 6,
+     [java]     "name" : "Swimming",
+     [java]     "description" : "Swimming in the river",
+     [java]     "startdate" : "2017-12-28-08:50",
+     [java]     "place" : "Adige river",
+     [java]     "type" : {
+     [java]       "name" : "Media"
+     [java]     }
+     [java]   }
+     [java] }
+     [java] 
+     [java] 
+     [java] Request #7: GET /person/1/Media Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity id="6">
+     [java]     <name>Swimming</name>
+     [java]     <description>Swimming in the river</description>
+     [java]     <startdate>2017-12-28-08:50</startdate>
+     [java]     <place>Adige river</place>
+     [java]     <activity_type>
+     [java]         <name>Media</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #9: POST /person/1/Media Accept: Application/XML Content-type: Application/XML
+     [java] => Result: Created
+     [java] => HTTP Status: 201
+     [java] <activity>
+     [java]     <name>Swimming</name>
+     [java]     <description>Swimming in the river</description>
+     [java]     <startdate>2017-12-28-08:50</startdate>
+     [java]     <place>Adige river</place>
+     [java]     <activity_type>
+     [java]         <name>Media</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #7: GET /person/1/Media Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity id="6">
+     [java]     <name>Swimming</name>
+     [java]     <description>Swimming in the river</description>
+     [java]     <startdate>2017-12-28-08:50</startdate>
+     [java]     <place>Adige river</place>
+     [java]     <activity_type>
+     [java]         <name>Media</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] <activity id="7">
+     [java]     <name>Swimming</name>
+     [java]     <description>Swimming in the river</description>
+     [java]     <startdate>2017-12-28-08:50</startdate>
+     [java]     <place>Adige river</place>
+     [java]     <activity_type>
+     [java]         <name>Media</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#10 using the {activity_id} or the activity created in the previous step and updating the value at will. Follow up with at Request#6 to check that the value was updated. If it was, result is OK, else is ERROR (Indicate if service not available).
+     [java] 
+     [java] Request #10: PUT /person/5/Sport/5 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity>
+     [java]     <activity_type>
+     [java]         <name>Step310test</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #6: GET /activity_types Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity_type>
+     [java]     <name>Game</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>School</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Media</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Social</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Sport</name>
+     [java] </activity_type>
+     [java] <activity_type>
+     [java]     <name>Step310test</name>
+     [java] </activity_type>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #10: PUT /person/5/Sport/5 Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Activity" : {
+     [java]     "id" : null,
+     [java]     "name" : null,
+     [java]     "description" : null,
+     [java]     "startdate" : null,
+     [java]     "place" : null,
+     [java]     "type" : {
+     [java]       "name" : "Step310testJSON"
+     [java]     }
+     [java]   }
+     [java] }
+     [java] 
+     [java] 
+     [java] Request #6: GET /activity_types Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "ActivityType" : {
+     [java]     "name" : "Game"
+     [java]   }
+     [java] }{
+     [java]   "ActivityType" : {
+     [java]     "name" : "School"
+     [java]   }
+     [java] }{
+     [java]   "ActivityType" : {
+     [java]     "name" : "Media"
+     [java]   }
+     [java] }{
+     [java]   "ActivityType" : {
+     [java]     "name" : "Social"
+     [java]   }
+     [java] }{
+     [java]   "ActivityType" : {
+     [java]     "name" : "Sport"
+     [java]   }
+     [java] }{
+     [java]   "ActivityType" : {
+     [java]     "name" : "Step310test"
+     [java]   }
+     [java] }{
+     [java]   "ActivityType" : {
+     [java]     "name" : "Step310testJSON"
+     [java]   }
+     [java] }
+     [java] 
+     [java] ---------------------------------
+     [java] 
+     [java] Send Request#11 for an activity_type, before and after dates given by your fellow student (who implemented the server). If status is 200 and there is at least one activity in the body, result is OK, else is ERROR (Indicate if service not available).
+     [java] 
+     [java] Request #11: GET /person/5/Step310testJSON?before=23-11-2017 10:00:00.0&after=21-11-2017 21:30:02.0 Accept: Application/XML Content-type: Application/XML
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] <activity id="5">
+     [java]     <name>Ruuning</name>
+     [java]     <description>400m run</description>
+     [java]     <startdate>22-11-2017 11:00:00.0</startdate>
+     [java]     <place>Stadium</place>
+     [java]     <activity_type>
+     [java]         <name>Step310testJSON</name>
+     [java]     </activity_type>
+     [java] </activity>
+     [java] 
+     [java] 
+     [java] 
+     [java] Request #11: GET /person/5/Step310testJSON?before=23-11-2017 10:00:00.0&after=21-11-2017 21:30:02.0 Accept: Application/JSON Content-type: Application/JSON
+     [java] => Result: OK
+     [java] => HTTP Status: 200
+     [java] {
+     [java]   "Activity" : {
+     [java]     "id" : 5,
+     [java]     "name" : "Ruuning",
+     [java]     "description" : "400m run",
+     [java]     "startdate" : "22-11-2017 11:00:00.0",
+     [java]     "place" : "Stadium",
+     [java]     "type" : {
+     [java]       "name" : "Step310testJSON"
+     [java]     }
+     [java]   }
+     [java] }
+     [java] 
+     [java] ---------------------------------
+     [java] 
