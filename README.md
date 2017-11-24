@@ -1,13 +1,13 @@
 ## Denis Gallo (194441) | denis.gallo@studenti.unitn.it
-My heroku server: https://assignment2-denisgallo.herokuapp.com/sdelab
-My github repositories: 
-https://github.com/DenisGallo/introsde-2017-assignment-2-server
-https://github.com/DenisGallo/introsde-2017-assignment-2-client
-I worked with Mattia Buffa.
-Heroku server: https://server-as2.herokuapp.com/as2
-His github repositories:
-https://github.com/CommanderBuffin/introsde-2017-assignment-2-server
-https://github.com/CommanderBuffin/introsde-2017-assignment-2-client
+My heroku server: https://assignment2-denisgallo.herokuapp.com/sdelab 
+My github repositories:  
+https://github.com/DenisGallo/introsde-2017-assignment-2-server  
+https://github.com/DenisGallo/introsde-2017-assignment-2-client   
+I worked with Mattia Buffa. 
+Heroku server: https://server-as2.herokuapp.com/as2 
+His github repositories: 
+https://github.com/CommanderBuffin/introsde-2017-assignment-2-server 
+https://github.com/CommanderBuffin/introsde-2017-assignment-2-client 
 
 ## Project
 
